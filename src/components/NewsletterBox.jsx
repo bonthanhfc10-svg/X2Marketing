@@ -71,7 +71,10 @@ const NewsletterBox = () => {
           type='submit'
           className='bg-black text-white text-xs px-8 py-4 rounded-full hover:bg-gray-800'
         >
+          <a href='https://t.me/x2didgitalmarketing' className='' >
           SUBSCRIBE
+          </a>
+          
         </button>
       </form>
     </div>
