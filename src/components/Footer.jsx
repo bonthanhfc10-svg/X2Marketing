@@ -18,11 +18,21 @@ const Footer = () => {
             </p>
             
             {/* Social Media Icons (Assuming you have icons in assets like assets.facebook_icon) */}
-              <div className='flex gap-4'>
-                <img src={assets.facebook_icon} alt="Facebook" className='w-6 h-6 cursor-pointer hover:opacity-70 transition duration-300' />
-                <img src={assets.telegram_icon} alt="Telegram" className='w-6 h-6 cursor-pointer hover:opacity-70 transition duration-300' />
-                <img src={assets.telephone_icon} alt="Telephone" className='w-6 h-6 cursor-pointer hover:opacity-70 transition duration-300' />
-              </div>
+             <div className='flex gap-4'>
+  
+                  <a href="https://www.facebook.com/share/17gbFQDgjE/" target="_blank" rel="noopener noreferrer">
+                    <img src={assets.facebook_icon} alt="Facebook" className='w-6 h-6 hover:opacity-70 transition duration-300' />
+                  </a>
+
+                  <a href="https://t.me/x2didgitalmarketing" target="_blank" rel="noopener noreferrer">
+                    <img src={assets.telegram_icon} alt="Telegram" className='w-6 h-6 hover:opacity-70 transition duration-300' />
+                  </a>
+
+                  <a href="tel:+855969249879">
+                    <img src={assets.telephone_icon} alt="Phone" className='w-6 h-6 hover:opacity-70 transition duration-300' />
+                  </a>
+
+            </div>
           </div>
           
           {/* Column 2: Company Links */}
