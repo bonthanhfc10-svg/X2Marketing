@@ -21,6 +21,7 @@ import { ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 
 function App() {
+
   return (
 
     <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
@@ -35,7 +36,8 @@ function App() {
 
         <Route path='/' element={<Home />} />
 
-        <Route path='/collection' element={<Collection />} />
+        {/* SERVICES PAGE */}
+        <Route path='/services' element={<Collection />} />
 
         <Route path='/about' element={<About />} />
 

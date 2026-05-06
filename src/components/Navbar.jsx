@@ -21,22 +21,94 @@ const Navbar = () => {
       </Link>
 
       {/* DESKTOP MENU */}
-      <ul className='hidden sm:flex gap-5 text-sm text-gray-700'>
+      <ul className='hidden sm:flex gap-7 text-sm'>
 
-        <NavLink to='/' className='flex flex-col items-center gap-1'>
-          <p>HOME</p>
+        {/* HOME */}
+        <NavLink
+          to='/'
+          className={({ isActive }) =>
+            `flex flex-col items-center gap-1 ${
+              isActive ? 'text-blue-600' : 'text-gray-700'
+            }`
+          }
+        >
+          {({ isActive }) => (
+            <>
+              <p>HOME</p>
+
+              <hr
+                className={`w-2/4 border-none h-[2px] bg-blue-600 ${
+                  isActive ? 'block' : 'hidden'
+                }`}
+              />
+            </>
+          )}
         </NavLink>
 
-        <NavLink to='/collection' className='flex flex-col items-center gap-1'>
-          <p>SERVICES</p>
+        {/* SERVICES */}
+        <NavLink
+          to='/services'
+          className={({ isActive }) =>
+            `flex flex-col items-center gap-1 ${
+              isActive ? 'text-blue-600' : 'text-gray-700'
+            }`
+          }
+        >
+          {({ isActive }) => (
+            <>
+              <p>SERVICES</p>
+
+              <hr
+                className={`w-2/4 border-none h-[2px] bg-blue-600 ${
+                  isActive ? 'block' : 'hidden'
+                }`}
+              />
+            </>
+          )}
         </NavLink>
 
-        <NavLink to='/about' className='flex flex-col items-center gap-1'>
-          <p>ABOUT</p>
+        {/* ABOUT */}
+        <NavLink
+          to='/about'
+          className={({ isActive }) =>
+            `flex flex-col items-center gap-1 ${
+              isActive ? 'text-blue-600' : 'text-gray-700'
+            }`
+          }
+        >
+          {({ isActive }) => (
+            <>
+              <p>ABOUT</p>
+
+              <hr
+                className={`w-2/4 border-none h-[2px] bg-blue-600 ${
+                  isActive ? 'block' : 'hidden'
+                }`}
+              />
+            </>
+          )}
         </NavLink>
 
-        <NavLink to='/contact' className='flex flex-col items-center gap-1'>
-          <p>CONTACT</p>
+        {/* CONTACT */}
+        <NavLink
+          to='/contact'
+          className={({ isActive }) =>
+            `flex flex-col items-center gap-1 ${
+              isActive ? 'text-blue-600' : 'text-gray-700'
+            }`
+          }
+        >
+          {({ isActive }) => (
+            <>
+              <p>CONTACT</p>
+
+              <hr
+                className={`w-2/4 border-none h-[2px] bg-blue-600 ${
+                  isActive ? 'block' : 'hidden'
+                }`}
+              />
+            </>
+          )}
         </NavLink>
 
       </ul>
@@ -44,6 +116,7 @@ const Navbar = () => {
       {/* RIGHT SIDE */}
       <div className='flex items-center gap-6'>
 
+        {/* SEARCH */}
         <img
           onClick={() => setShowSearch(true)}
           src={assets.search_icon}
@@ -51,6 +124,7 @@ const Navbar = () => {
           alt=''
         />
 
+        {/* MOBILE MENU BUTTON */}
         <img
           onClick={() => setVisible(true)}
           src={assets.menu_icon}
@@ -61,31 +135,58 @@ const Navbar = () => {
       </div>
 
       {/* MOBILE MENU */}
-      <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${visible ? 'w-full' : 'w-0'}`}>
+      <div
+        className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all z-50 ${
+          visible ? 'w-full' : 'w-0'
+        }`}
+      >
 
         <div className='flex flex-col text-gray-600'>
 
+          {/* BACK BUTTON */}
           <div
             onClick={() => setVisible(false)}
             className='flex items-center gap-4 p-3 cursor-pointer'
           >
-            <img className='h-4 rotate-180' src={assets.dropdown_icon} alt='' />
+            <img
+              className='h-4 rotate-180'
+              src={assets.dropdown_icon}
+              alt=''
+            />
+
             <p>BACK</p>
           </div>
 
-          <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border' to='/'>
+          {/* MOBILE LINKS */}
+          <NavLink
+            onClick={() => setVisible(false)}
+            className='py-3 pl-6 border'
+            to='/'
+          >
             HOME
           </NavLink>
 
-          <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border' to='/collection'>
+          <NavLink
+            onClick={() => setVisible(false)}
+            className='py-3 pl-6 border'
+            to='/services'
+          >
             SERVICES
           </NavLink>
 
-          <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border' to='/about'>
+          <NavLink
+            onClick={() => setVisible(false)}
+            className='py-3 pl-6 border'
+            to='/about'
+          >
             ABOUT
           </NavLink>
 
-          <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border' to='/contact'>
+          <NavLink
+            onClick={() => setVisible(false)}
+            className='py-3 pl-6 border'
+            to='/contact'
+          >
             CONTACT
           </NavLink>
 
@@ -94,6 +195,7 @@ const Navbar = () => {
       </div>
 
     </div>
+
   )
 }
 

@@ -40,7 +40,7 @@ const Hero = () => {
 
           {/* SERVICES */}
           <Link
-            to='/collection'
+            to='/services'
             className='border border-gray-400 px-5 py-2 rounded-full text-sm font-semibold hover:bg-white transition'
           >
             View Services
@@ -48,7 +48,7 @@ const Hero = () => {
 
         </div>
 
-        {/* TAGS */}
+        {/* SOCIAL TAGS */}
         <div className='flex gap-2 mt-6 text-xs font-semibold flex-wrap'>
 
           <span className='bg-white px-3 py-1 rounded-full shadow'>
