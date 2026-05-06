@@ -1,9 +1,13 @@
+// Hero.jsx
+
 import React from 'react'
 import { assets } from '../assets/assets'
 import { Link } from 'react-router-dom'
 
 const Hero = () => {
+
   return (
+
     <div className='flex flex-col sm:flex-row items-center bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 rounded-3xl overflow-hidden border border-gray-200 shadow-sm'>
 
       {/* LEFT SIDE */}
@@ -24,7 +28,7 @@ const Hero = () => {
         {/* BUTTONS */}
         <div className='flex gap-3 mt-6 flex-wrap'>
 
-          {/* TELEGRAM BUTTON */}
+          {/* TELEGRAM */}
           <a
             href='https://t.me/x2didgitalmarketing'
             target='_blank'
@@ -34,7 +38,7 @@ const Hero = () => {
             Get Started
           </a>
 
-          {/* SERVICES BUTTON */}
+          {/* SERVICES */}
           <Link
             to='/collection'
             className='border border-gray-400 px-5 py-2 rounded-full text-sm font-semibold hover:bg-white transition'
@@ -44,7 +48,7 @@ const Hero = () => {
 
         </div>
 
-        {/* SOCIAL TAGS */}
+        {/* TAGS */}
         <div className='flex gap-2 mt-6 text-xs font-semibold flex-wrap'>
 
           <span className='bg-white px-3 py-1 rounded-full shadow'>
@@ -79,6 +83,7 @@ const Hero = () => {
       </div>
 
     </div>
+
   )
 }
 
